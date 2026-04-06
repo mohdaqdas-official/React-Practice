@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+#notes-container::-webkit-scrollbar-track {
+  background: transparent;
+}

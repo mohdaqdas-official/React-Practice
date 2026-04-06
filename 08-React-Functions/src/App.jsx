@@ -2,21 +2,21 @@ import React from 'react'
 
 const App = () => {
 
-  function inputFocus(){
-    console.log("Input Focused");
+  function ScrollValue(val){
+    if(val > 0){
+      console.log("Down Scroll");
+    } else {
+      console.log("Up Scroll");
+    }
   }
 
-  function inputChanging(){
-    console.log("Input value Changed");
-  }
   return (
-    <div>
-      <input onChange={function(elem){
-        console.log('value: ',elem.target.value, 'Length: ', elem.target.value.length )
-      }}
-      type="text"
-      placeholder='Enter Something' 
-      />
+    <div onWheel={function(elem){
+        ScrollValue(elem.deltaY)
+    }}>
+      <div className='h-[100vh] w-full bg-[#111]'/>
+      <div className='h-[100vh] w-full bg-[#222]'/>
+      <div className='h-[100vh] w-full bg-[#333]'/>
     </div>
   )
 }
