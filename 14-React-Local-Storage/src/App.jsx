@@ -10,7 +10,6 @@ const App = () => {
   const users = JSON.stringify(localStorage.getItem('user'))
   const usera = JSON.parse(localStorage.getItem('user'))
   console.log(usera)
-  
 
   localStorage.setItem('user', 'Mohd')
   localStorage.getItem('user')
